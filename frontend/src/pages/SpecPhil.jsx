@@ -24,11 +24,14 @@ const SpecPhil = () => {
     return (
        
         <div className="bg-black text-white h-auto flex flex-col text-center">
-            <div className='text-9xl'>{data.name}</div>
-            <div>
-            <img src={data.photo} className='h-64 w-60 content-center'/>
+            <div className='text-5xl pb-10'>{data.name}</div>
+            <div className='flex justify-center'>
+            <img src={data.photo} className='h-64 w-60 '/>
             </div>
+            <div className='flex flex-row text-center justify-center'>
+            <div>ERA</div>
             <div>{data.era}</div>
+            </div>
             <div>SCHOOLS</div>
             {(data.school).map((sch,key)=>{
                 return (
