@@ -8,6 +8,7 @@ const SpecPhil = () => {
     const fetchQuotes = async () => {
         const response = await fetch(`http://localhost:5000/philosophers/${id}`);
         const data = await response.json();
+        setData(data);
         console.log(data);
     }
 
@@ -17,8 +18,17 @@ const SpecPhil = () => {
 
 
     return (
-        <div className='bg-black'>
-            
+        <div className="bg-black text-white h-auto">
+            <div className='text-9xl'>{data.name}</div>
+            <img src={data.photo}/>
+            <div>{data.era}</div>
+            {(data.school).map((sch,key)=>{
+                return (
+                    <div key={key}>
+                        {sch}
+                    </div>
+                )
+            })}
         </div>
     );
 };
