@@ -32,7 +32,8 @@ const SpecPhil = () => {
             <div>ERA</div>
             <div>{data.era}</div>
             </div>
-            <div>SCHOOLS</div>
+            <div className='grid grid-cols-6'>
+            <div className='text-3xl'>SCHOOLS</div>
             {(data.school).map((sch,key)=>{
                 return (
                     <div key={key}>
@@ -40,6 +41,7 @@ const SpecPhil = () => {
                     </div>
                 )
             })}
+            </div>
             <div>IDEAS</div>
             {(data.ideas).map((sch,key)=>{
                 return (
